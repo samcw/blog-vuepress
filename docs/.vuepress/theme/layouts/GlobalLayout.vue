@@ -5,7 +5,8 @@
       <div class="less-navbar-right">
         <a :href="item.link"
         v-for="(item, key) in $themeConfig.nav"
-        class="less-navbar-item">{{item.text}}</a>
+        class="less-navbar-item"
+        :key="key">{{item.text}}</a>
         <SearchBox></SearchBox>
       </div>
     </div>
@@ -61,7 +62,7 @@ export default {
     color: #2f3d4a !important;
     font-size: 14px;
     transition: border 0.5s;
-    border-bottom: 1px transparent solid;
+    border-bottom: 2px transparent solid;
   }
   .less-navbar-item:hover {
     border-bottom: 2px #005cc5 solid;
