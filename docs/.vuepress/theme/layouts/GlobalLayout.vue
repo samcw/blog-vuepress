@@ -11,9 +11,13 @@
       </div>
     </div>
     <div class="less-main">
-      <component :is="layout"/>
+      <transition name="fade">
+        <component :is="layout"/>
+      </transition>
     </div>
-    <div></div>
+    <!-- <div class="less-footer">
+      <span class="less-footer-content">@Samcw</span>
+    </div> -->
   </div>
 </template>
 
@@ -43,6 +47,9 @@ export default {
     text-decoration: none;
     color: inherit;
   }
+  .less-container {
+    margin-bottom: 10px;
+  }
   .less-navbar {
     clear: both;
     border-bottom: 1px #f3f5f4 solid;
@@ -69,6 +76,22 @@ export default {
   }
   .less-main {
     display: flex;
+  }
+  .less-footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px #f3f5f4 solid;
+    margin-top: 10px;
+  }
+  .less-footer-content {
+    color: #8e8e8e;
+    font-size: 10px;
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s ease;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   }
   @media screen and (max-width: 500px) {
     .search-box input {

@@ -10,9 +10,16 @@
         <p v-for="(item, key) in $themeConfig.nav" :key="key"><a :href="item.link" class="less-navbar-item">{{item.text}}</a></p>
       </div>
     </div>
-    <div class="less-main-mid">
-      <Content></Content>
-    </div>
+    <!-- <Transition> -->
+      <div class="less-main-mid">
+        <Item v-for="(item, key) in articleList" :key="key" :item="item"></Item>
+        <div class="less-pagination">
+          <router-link v-if="$pagination.hasPrev" :to="$pagination.prevLink">Prev</router-link>
+          <router-link v-if="$pagination.hasNext" :to="$pagination.nextLink">Next</router-link>
+        </div>
+      </div>
+    <!-- </Transition> -->
+
     <div class="less-main-right">
       <!-- <h2>right</h2> -->
     </div>
@@ -20,11 +27,19 @@
 </template>
 
 <script>
+import Item from '../components/Item'
+import Transition from '../components/Transition'
+
   export default {
     data () {
       return {
-        toTopHeight: 0
+        toTopHeight: 0,
+        articleList: ''
       }
+    },
+    components: {
+      Item,
+      Transition
     },
     watch: {
       toTopHeight: function (newVal, oldVal) {
@@ -32,6 +47,9 @@
           this.$refs.leftMenu.className = 'less-home-left-show';
         else
           this.$refs.leftMenu.className = 'less-home-left-hide';
+      },
+      $route: function () {
+        this.articleList = this.$pagination.pages;
       }
     },
     methods: {
@@ -41,10 +59,15 @@
     },
     mounted () {
       window.addEventListener('scroll', this.handleScroll);
+      this.articleList = this.$pagination.pages;
+      console.log(this.$pagination.pages);
     },
     destroyed () {
       window.removeEventListener('scroll', this.handleScroll);
-    }
+    },
+    // beforeRouteUpdate (to, from, next) {
+    //   window.addEventListener('scroll', this.handleScroll);
+    // },
   }
 </script>
 
@@ -60,6 +83,7 @@
   .less-main-mid {
     display: flex;
     justify-content: center;
+    flex-direction: column;
   }
   .less-main-right {
     justify-content: center;
@@ -97,13 +121,14 @@
     width: 90px;
     opacity: 0;
   }
-  /* .less-home-left a {
-    color: #2f3d4a;
-    transition: border 0.5s;
-    border-bottom: 1px transparent solid;
+  .less-pagination {
+    margin-top: 20px;
   }
-  .less-home-left a:hover {
-    border-bottom: 2px #005cc5 solid;
+  /* .fade-enter-active, .fade-leave-active {
+    transition: opacity .3s ease;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   } */
   @media screen and (min-width: 800px) {
     .less-main-left {

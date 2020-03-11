@@ -18,8 +18,22 @@ module.exports = {
           layout: 'Category',
           scopeLayout: 'CategoryPart',
           pagination: {
-            lengthPerPage: 1,
+            lengthPerPage: 7,
+            layout: 'CategoryPart'
           },
+        }
+      ],
+      directories: [
+        {
+          id: 'article',
+          dirname: 'article',
+          path: '/home/',
+          layout: 'Layout',
+          itemLayout: 'Article',
+          pagination: {
+            lengthPerPage: 5,
+            layout: 'Layout'
+          }
         }
       ]
     },
