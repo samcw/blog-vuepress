@@ -9,19 +9,6 @@ module.exports = {
     ]
   },
   plugins: {
-    '@vuepress/back-to-top': {},
-    // '@vuepress/active-header-links': {
-    //   sidebarLinkSelector: '.sidebar-link',
-    //   headerAnchorSelector: '.header-anchor'
-    // },
-    // '@vuepress/blog': {},
-    // '@vuepress/nprogress': {},
-    // 'vuepress-plugin-container': {
-    //   type: 'tip',
-    //   defaultTitle: {
-    //     '/': 'TIP',
-    //     '/zh/': '提示',
-    //   },
-    // },
+
   },
 }

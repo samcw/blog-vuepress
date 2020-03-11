@@ -1,6 +1,7 @@
 ---
 title: 在HTML中使用JavaScript
 category: JavaScript
+description: 在重写了前面的 createFunctions()函数后，每个函数就会返回各自不同的索引值了。在这个版 本中，我们没有直接把闭包赋值给数组，而是定义了一个匿名函数，并将立即执行该匿名函数的结果赋 给数组。这里的匿名函数有一个参数 num，也就是最终的函数要返回的值。在调用每个匿名函数时，我 们传入了变量 i。
 time: 2020-03-10
 ---
 ## `<script>`元素

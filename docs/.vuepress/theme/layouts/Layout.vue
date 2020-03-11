@@ -3,11 +3,11 @@
     <div class="less-main-left">
       <div class="less-home-profile">
         <h2>Samcw</h2>
-        <p class="less-home-address"><a href="https://github.com/samcw" target="_block">Github Address</a></p>
-        <p class="less-home-address"><a href="https://weibo.com/5645270312/profile" target="_block">Weibo Address</a></p>
+        <p class="less-home-address"><a href="https://github.com/samcw" target="_block" class="less-navbar-item">Github</a></p>
+        <p class="less-home-address"><a href="https://weibo.com/5645270312/profile" target="_block" class="less-navbar-item">Weibo</a></p>
       </div>
-      <div ref="leftMenu" style="transition: opacity 1s">
-        <p v-for="(item, key) in $themeConfig.nav" :key="key"><a :href="item.link">{{item.text}}</a></p>
+      <div ref="leftMenu" style="transition: opacity 1s" class="less-home-left">
+        <p v-for="(item, key) in $themeConfig.nav" :key="key"><a :href="item.link" class="less-navbar-item">{{item.text}}</a></p>
       </div>
     </div>
     <div class="less-main-mid">
@@ -29,9 +29,9 @@
     watch: {
       toTopHeight: function (newVal, oldVal) {
         if (newVal >= 55)
-          this.$refs.leftMenu.className = 'less-home-left-show less-home-left';
+          this.$refs.leftMenu.className = 'less-home-left-show';
         else
-          this.$refs.leftMenu.className = 'less-home-left-hide less-home-left';
+          this.$refs.leftMenu.className = 'less-home-left-hide';
       }
     },
     methods: {
@@ -74,27 +74,37 @@
   .less-home-profile a {
     color: #2f3d4a;
   }
+  .less-home-profile h2 {
+    padding-left: 10px;
+  }
   .less-home-left-hide {
+    position: fixed;
+    top: 350px;
+    width: 90px;
     pointer-events: none;
     opacity: 0;
   }
   .less-home-left-show {
+    position: fixed;
+    top: 350px;
+    width: 90px;
     pointer-events: auto;
     opacity: 1;
   }
   .less-home-left {
     position: fixed;
     top: 350px;
-    width: 134px;
+    width: 90px;
+    opacity: 0;
   }
-  .less-home-left a {
+  /* .less-home-left a {
     color: #2f3d4a;
     transition: border 0.5s;
     border-bottom: 1px transparent solid;
   }
   .less-home-left a:hover {
     border-bottom: 2px #005cc5 solid;
-  }
+  } */
   @media screen and (min-width: 800px) {
     .less-main-left {
       display: flex;
