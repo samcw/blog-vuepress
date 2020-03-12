@@ -88,7 +88,7 @@ export default {
     font-size: 10px;
   }
   .fade-enter-active, .fade-leave-active {
-    transition: opacity 2s ease;
+    transition: opacity .5s ease;
   }
   .fade-enter, .fade-leave-to {
     opacity: 0;

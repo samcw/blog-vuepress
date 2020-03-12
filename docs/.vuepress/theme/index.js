@@ -27,20 +27,13 @@ module.exports = {
         {
           id: 'article',
           dirname: 'article',
-          path: '/home/',
+          path: '/',
           layout: 'Layout',
           itemLayout: 'Article',
           pagination: {
             lengthPerPage: 5,
             layout: 'Layout'
           }
-        },
-        {
-          id: 'about',
-          dirname: 'about',
-          path: '/about/',
-          layout: 'About',
-          itemLayout: 'About'
         }
       ],
       sitemap: {

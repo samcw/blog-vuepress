@@ -57,11 +57,14 @@ import Transition from '../components/Transition'
     mounted () {
       window.addEventListener('scroll', this.handleScroll);
       this.articleList = this.$pagination.pages;
-      console.log(this.$pagination.pages);
     },
     destroyed () {
       window.removeEventListener('scroll', this.handleScroll);
-    }
+    },
+    // created () {
+    //   if (this.$route.path == '/')
+    //     this.$router.push('/home');
+    // }
   }
 </script>
 
