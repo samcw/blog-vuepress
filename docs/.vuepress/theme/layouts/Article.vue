@@ -2,18 +2,16 @@
   <div class="less-container">
     <div class="less-main-left">
       <div style="transition: opacity 1s" class="less-home-left" ref="articleLeft">
-        <p class="less-category-time">{{article.time.slice(0, 10)}}</p>
+        <p class="less-category-time">{{article.date.slice(0, 10)}}</p>
         <span class="less-category-tag">{{article.category}}</span>
       </div>
     </div>
-    <Transition>
       <div class="less-main-mid">
         <div class="less-article-top">
-          <span class="less-category-tag">{{article.category}}</span><span class="less-category-time">{{article.time.slice(0, 10)}}</span>
+          <span class="less-category-tag">{{article.category}}</span><span class="less-category-time">{{article.date.slice(0, 10)}}</span>
         </div>
         <Content></Content>
       </div>
-    </Transition>
     <div class="less-main-right">
     </div>
   </div>
@@ -24,7 +22,7 @@ import Transition from '../components/Transition'
 export default {
   data () {
     return {
-      toTopHeight: 0
+      toTopHeight: 0,
     }
   },
   components: {

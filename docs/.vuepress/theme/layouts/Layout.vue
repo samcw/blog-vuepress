@@ -10,16 +10,13 @@
         <p v-for="(item, key) in $themeConfig.nav" :key="key"><a :href="item.link" class="less-navbar-item">{{item.text}}</a></p>
       </div>
     </div>
-    <!-- <Transition> -->
-      <div class="less-main-mid">
-        <Item v-for="(item, key) in articleList" :key="key" :item="item"></Item>
-        <div class="less-pagination">
-          <router-link v-if="$pagination.hasPrev" :to="$pagination.prevLink">Prev</router-link>
-          <router-link v-if="$pagination.hasNext" :to="$pagination.nextLink">Next</router-link>
-        </div>
+    <div class="less-main-mid">
+      <Item v-for="(item, key) in articleList" :key="key" :item="item"></Item>
+      <div class="less-pagination">
+        <router-link v-if="$pagination.hasPrev" :to="$pagination.prevLink">Prev</router-link>
+        <router-link v-if="$pagination.hasNext" :to="$pagination.nextLink">Next</router-link>
       </div>
-    <!-- </Transition> -->
-
+    </div>
     <div class="less-main-right">
       <!-- <h2>right</h2> -->
     </div>
@@ -64,10 +61,7 @@ import Transition from '../components/Transition'
     },
     destroyed () {
       window.removeEventListener('scroll', this.handleScroll);
-    },
-    // beforeRouteUpdate (to, from, next) {
-    //   window.addEventListener('scroll', this.handleScroll);
-    // },
+    }
   }
 </script>
 

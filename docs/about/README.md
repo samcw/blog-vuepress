@@ -1,7 +1,9 @@
 ---
 title: 关于
 category: About
-time: 2020-03-10
+description: About
+date: 2020-03-10
+layout: About
 ---
 ![ce4d8fef-a70e-4891-857a-cdc47dbd1926_200x200](https://tva1.sinaimg.cn/large/0082zybpgy1gbye2rtyv8j305k05k3yh.jpg)
 

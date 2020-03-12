@@ -20,7 +20,7 @@ module.exports = {
           pagination: {
             lengthPerPage: 7,
             layout: 'CategoryPart'
-          },
+          }
         }
       ],
       directories: [
@@ -34,8 +34,18 @@ module.exports = {
             lengthPerPage: 5,
             layout: 'Layout'
           }
+        },
+        {
+          id: 'about',
+          dirname: 'about',
+          path: '/about/',
+          layout: 'About',
+          itemLayout: 'About'
         }
-      ]
+      ],
+      sitemap: {
+        hostname: 'https://samchow.cn'
+      },
     },
     // '@vuepress/nprogress': {},
     'vuepress-plugin-container': {

@@ -2,7 +2,7 @@
   <div>
     <h2><a :href="item.path" class="less-category-item">{{items.title}}</a></h2>
     <div class="less-category-item-content">{{items.description}}</div>
-    <div class="less-category-item-bottom"><span class="less-category-tag">{{items.category}}</span><span class="less-category-time">{{items.time.slice(0, 10)}}</span></div>
+    <div class="less-category-item-bottom"><span class="less-category-tag">{{items.category}}</span><span class="less-category-time">{{items.date.slice(0, 10)}}</span></div>
   </div>
 </template>
 
