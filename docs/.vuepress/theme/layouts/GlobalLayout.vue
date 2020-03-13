@@ -74,9 +74,6 @@ export default {
   .less-navbar-item:hover {
     border-bottom: 2px #005cc5 solid;
   }
-  .less-main {
-    display: flex;
-  }
   .less-footer {
     display: flex;
     justify-content: center;
@@ -109,6 +106,9 @@ export default {
     .less-navbar-item {
       padding: 2px 0 2px 0;
       margin: 0 10px 0 10px;
+    }
+    .less-main {
+      display: flex;
     }
   }
 </style>

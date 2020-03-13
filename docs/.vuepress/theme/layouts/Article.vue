@@ -56,22 +56,6 @@ export default {
 </script>
 
 <style>
-  .less-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  .less-main-left {
-    justify-content: center;
-  }
-  .less-main-mid {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .less-main-right {
-    justify-content: center;
-  }
   .less-category-time {
     font-size: 14px;
   }
@@ -106,16 +90,29 @@ export default {
     width: 90px;
     opacity: 0;
   }
+  img {
+    max-width: 95%;
+  }
   @media screen and (min-width: 800px) {
+    .less-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
     .less-main-left {
+      justify-content: center;
       display: flex;
       width: 25%;
     }
     .less-main-mid {
       width: 50%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
     }
     .less-main-right {
       display: flex;
+      justify-content: center;
       width: 25%;
     }
   }
