@@ -8,8 +8,10 @@
     <div class="less-main-mid">
       <div class="less-midBar-isShow"><p v-for="(item, key) in list"><a :href="item.path" class="less-navbar-item" :ref="item.name + 'top'">{{item.name}}</a></p></div>
       <Item v-for="(item, key) in categoryList" :key="key" :item="item"></Item>
-      <router-link v-if="$pagination.hasPrev" :to="$pagination.prevLink">Prev</router-link>
-      <router-link v-if="$pagination.hasNext" :to="$pagination.nextLink">Next</router-link>
+      <div class="less-pagination">
+        <router-link v-if="$pagination.hasPrev" :to="$pagination.prevLink">Prev</router-link>
+        <router-link v-if="$pagination.hasNext" :to="$pagination.nextLink">Next</router-link>
+      </div>
     </div>
     <div class="less-main-right">
 
@@ -77,6 +79,10 @@ export default {
   }
   .less-category-left-active {
     border-bottom: 2px #005cc5 solid;
+  }
+  .less-pagination {
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
   @media screen and (min-width: 800px) {
     .less-main-left {

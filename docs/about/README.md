@@ -22,3 +22,7 @@ layout: About
   [Github](https://github.com/samcw)
 
   <tsukihie@gmail.com>
+
+## 本站
+
+  鄂ICP备20002869

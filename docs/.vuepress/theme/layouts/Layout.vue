@@ -120,6 +120,7 @@ import Transition from '../components/Transition'
   }
   .less-pagination {
     margin-top: 20px;
+    margin-bottom: 10px;
   }
   /* .fade-enter-active, .fade-leave-active {
     transition: opacity .3s ease;
