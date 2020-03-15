@@ -42,13 +42,14 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style>
   a {
     text-decoration: none;
     color: inherit;
   }
   .less-container {
     margin-bottom: 10px;
+    word-break: break-all;
   }
   .less-navbar {
     clear: both;
@@ -92,6 +93,9 @@ export default {
   }
   .fade-enter-to {
     opacity: 1;
+  }
+  .content__default img {
+    max-width: 95%;
   }
   @media screen and (max-width: 500px) {
     .search-box input {

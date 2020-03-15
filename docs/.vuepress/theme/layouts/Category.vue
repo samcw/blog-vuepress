@@ -22,7 +22,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   .less-category-home {
     display: flex;
     justify-content: center;

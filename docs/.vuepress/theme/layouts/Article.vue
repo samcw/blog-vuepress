@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .less-category-time {
     font-size: 14px;
   }
@@ -73,14 +73,14 @@ export default {
   .less-home-left-hide {
     position: fixed;
     top: 250px;
-    width: 90px;
+    /* width: 90px; */
     pointer-events: none;
     opacity: 0;
   }
   .less-home-left-show {
     position: fixed;
     top: 250px;
-    width: 90px;
+    /* width: 90px; */
     pointer-events: auto;
     opacity: 1;
   }
@@ -88,10 +88,8 @@ export default {
     position: fixed;
     top: 250px;
     width: 90px;
+    /* width: auto; */
     opacity: 0;
-  }
-  img {
-    max-width: 95%;
   }
   @media screen and (min-width: 800px) {
     .less-container {

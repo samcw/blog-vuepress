@@ -68,12 +68,7 @@ import Transition from '../components/Transition'
   }
 </script>
 
-<style>
-  .less-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
+<style scoped>
   .less-main-left {
     justify-content: center;
   }
@@ -129,6 +124,11 @@ import Transition from '../components/Transition'
     opacity: 0;
   } */
   @media screen and (min-width: 800px) {
+    .less-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
     .less-main-left {
       display: flex;
       width: 25%;

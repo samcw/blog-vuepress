@@ -56,7 +56,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .less-container {
     display: flex;
     justify-content: center;

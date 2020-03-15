@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .less-category-item {
     color: #2f3d4a;
     font-size: 20px;
