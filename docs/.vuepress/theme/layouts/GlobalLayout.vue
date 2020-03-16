@@ -6,7 +6,8 @@
         <a :href="item.link"
         v-for="(item, key) in $themeConfig.nav"
         class="less-navbar-item"
-        :key="key">{{item.text}}</a>
+        :key="key"
+        v-if="navBarShow">{{item.text}}</a>
         <SearchBox></SearchBox>
       </div>
     </div>
@@ -24,6 +25,11 @@
 <script>
 import SearchBox from '@SearchBox'
 export default {
+  data () {
+    return {
+      navBarShow: true
+    }
+  },
   components: {
     SearchBox
   },
@@ -38,6 +44,23 @@ export default {
       }
       return 'NotFound'
     }
+  },
+  methods: {
+    handleInputFocus () {
+      let width = document.documentElement.clientWidth | document.body.clientWidth;
+      if (width < 960)
+        this.navBarShow = false;
+    },
+    handleInputBlur () {
+      setTimeout(function () {
+        this.navBarShow = true
+      }.bind(this), 300);
+    }
+  },
+  mounted () {
+    let input = document.getElementsByClassName('search-box')[0].children[0];
+    input.onfocus = this.handleInputFocus;
+    input.onblur = this.handleInputBlur;
   }
 }
 </script>

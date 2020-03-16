@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'HISTO',
+  title: 'SAMCW BLOG',
   description: 'Samcw Personal blog powered by VuePress',
   themeConfig: {
     nav: [

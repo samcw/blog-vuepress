@@ -13,7 +13,14 @@ layout: About
 
 ## 项目
 
-  很遗憾，个人的开源项目为0。希望今后可以有所成就。
+实验室项目：
+
+  [中南民族大学工程中心官网后台](https://newthread.coding.net/p/Git_NTP_EC_background_Web)：`AngularJs`。
+
+个人项目
+
+  [博客](http:samchow.cn)：`Vue`。
+
 
 ## 联系我
 
@@ -25,4 +32,4 @@ layout: About
 
 ## 本站
 
-  鄂ICP备20002869
+  [鄂ICP备20002869号](http://www.beian.miit.gov.cn)
