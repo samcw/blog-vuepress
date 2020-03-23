@@ -120,6 +120,9 @@ export default {
   .content__default img {
     max-width: 95%;
   }
+  .katex-html {
+    display: none;
+  }
   @media screen and (max-width: 500px) {
     .search-box input {
       position: initial;

@@ -13,5 +13,11 @@ module.exports = {
   },
   head: [
     ['link', { rel: 'icon', href: '/avatar.png' }]
-  ]
+  ],
+  markdown: {
+    extendMarkdown: md => {
+      // 使用更多的 markdown-it 插件!
+      md.use(require('markdown-it-katex'))
+    }
+  }
 }
