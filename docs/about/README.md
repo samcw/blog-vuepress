@@ -7,7 +7,7 @@ layout: About
 
   目前技术栈：`Vue` + `Vuex` + `Node`，熟练程度堪忧，需要进一步学习。
 
-  未来的学习路线为：`TypeScript` + `React` + `Java` + `Golang`。
+  未来的学习路线为：`Golang` + `TypeScript` + `React`。
 
   如果你可以对我提出宝贵的学习建议，欢迎联系我。
 

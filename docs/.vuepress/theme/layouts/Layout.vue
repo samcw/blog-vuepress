@@ -2,7 +2,7 @@
   <div class="less-container">
     <div class="less-main-left">
       <div class="less-home-profile">
-        <h2>Samcw</h2>
+        <h2>Contact</h2>
         <p class="less-home-address"><a href="https://github.com/samcw" target="_block" class="less-navbar-item">Github</a></p>
         <p class="less-home-address"><a href="https://weibo.com/5645270312/profile" target="_block" class="less-navbar-item">Weibo</a></p>
       </div>
