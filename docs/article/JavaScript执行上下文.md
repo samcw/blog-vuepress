@@ -12,12 +12,12 @@ date: 2020-04-08
 2. `JavaScript`采用的是所谓**词法作用域**，也就是静态作用域。这里举一个🌰：
 
    ```javascript
-   let value = 1;
+   var value = 1;
    function foo () {
      console.log(value);
    }
    function bar () {
-     let value = 2;
+     var value = 2;
      foo();
    }
    bar()
@@ -99,9 +99,9 @@ date: 2020-04-08
 
       ```javascript
       function foo (d) {
-        let a = 2;
+        var a = 2;
         function b () {};
-        let c = function () {};
+        var c = function () {};
         a = 3;
       }
       foo(1);
@@ -137,12 +137,28 @@ date: 2020-04-08
       }
       ```
 
-6. 总结：
+6. `let`：有关于使用`let`定义变量，是否在执行函数语句前初始化的问题，一直困扰了我很久。其实，使用`let`定义的变量，**在函数执行前是会进行提升**的，但是注意，仅仅进行了提升，也就是存在于活动对象当中，但是**它并没有被初始化**。可以看下面这个🌰：
+
+   ```javascript
+   let a = 1;
+   function test () {
+     console.log(a);
+     let a = 2;
+   }
+   test()
+   ```
+
+   如果不会进行提升，那么想必命令行会打印函数外层`a`的值，但事实却是打印了`ReferenceError: Cannot access 'a' before initialization`，这是一个``ReferenceError`，提示我们变量`a`还未进行初始化。
+
+   这就表明了，变量`a`被提升了，这就使得它屏蔽外层定义的变量`a`，但是它又未被初始化，甚至值都不是`undefined`。**这就是在定义变量的语句之前，形成了一个死区，这个区域内，都无法使用这个变量。**
+
+7. 总结：
 
    1. 全局上下文的变量对象初始化为**全局对象**。
    2. 函数上下文的变量对象初始化为之包含`Arguments`对象。
    3. 在进入执行栈上下文时会给变量对象添加**形参**、**函数声明**、**变量声明**等初始的属性值。
    4. 在代码执行阶段，会再次修改变量对象的属性值。
+   5. `let`定义的变量，一样会被提升，但是没有初始化。
 
 ### 作用域链
 
@@ -194,9 +210,9 @@ date: 2020-04-08
    结合执行上下文栈、变量对象以及作用域链，我们来总结一下，一个函数执行上下文中作用域链和变量对象的创建过程：
 
    ```javascript
-   let scope = "global scope";
+   var scope = "global scope";
    function checkscope () {
-     let scope2 = 'local scope';
+     var scope2 = 'local scope';
      return scope2;
    }
    checkscope();
