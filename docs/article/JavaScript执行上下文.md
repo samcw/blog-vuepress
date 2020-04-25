@@ -148,7 +148,7 @@ date: 2020-04-08
    test()
    ```
 
-   如果不会进行提升，那么想必命令行会打印函数外层`a`的值，但事实却是打印了`ReferenceError: Cannot access 'a' before initialization`，这是一个``ReferenceError`，提示我们变量`a`还未进行初始化。
+   如果不会进行提升，那么想必命令行会打印函数外层`a`的值，但事实却是打印了`ReferenceError: Cannot access 'a' before initialization`，这是一个`ReferenceError`，提示我们变量`a`还未进行初始化。
 
    这就表明了，变量`a`被提升了，这就使得它屏蔽外层定义的变量`a`，但是它又未被初始化，甚至值都不是`undefined`。**这就是在定义变量的语句之前，形成了一个死区，这个区域内，都无法使用这个变量。**
 

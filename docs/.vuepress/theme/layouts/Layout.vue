@@ -112,6 +112,7 @@ import Transition from '../components/Transition'
     top: 350px;
     width: 90px;
     opacity: 0;
+    widows: 121px;
   }
   .less-pagination {
     margin-top: 20px;
