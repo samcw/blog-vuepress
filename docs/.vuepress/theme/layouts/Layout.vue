@@ -99,20 +99,20 @@ import Transition from '../components/Transition'
     width: 90px;
     pointer-events: none;
     opacity: 0;
+    width: 121px;
   }
   .less-home-left-show {
     position: fixed;
     top: 350px;
-    width: 90px;
     pointer-events: auto;
     opacity: 1;
+    width: 121px;
   }
   .less-home-left {
     position: fixed;
     top: 350px;
     width: 90px;
     opacity: 0;
-    widows: 121px;
   }
   .less-pagination {
     margin-top: 20px;
